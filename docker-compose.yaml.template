@@ -1,0 +1,24 @@
+services:
+  {project}:
+    restart: always
+    container_name: {container_name}
+    build:
+      context: .
+      args:
+        registry: {registry}
+        image: {image}
+        container_name: "{container_name}"
+        uid: {user_id}
+        gid: {group_id}
+        user: {user}
+        name: "{name}"
+        email: "{email}"
+    image: {container_image}
+    shm_size: "{shm_size}gb"
+    volumes:
+      - ./workspace:/workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - capabilities: [gpu]
