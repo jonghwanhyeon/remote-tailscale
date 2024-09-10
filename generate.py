@@ -48,7 +48,7 @@ def get_shm_size() -> int:
 
 defaults = {
     "registry": "ghcr.io",
-    "image": "jonghwanhyeon/ml:cuda11.8-python3.12-torch2.3",
+    "image": "jonghwanhyeon/ml:cuda12.1-python3.12-torch2.4",
     "uid": str(os.geteuid()),
     "gid": str(os.getegid()),
     "user": str(getpass.getuser()),
